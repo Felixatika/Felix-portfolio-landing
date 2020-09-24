@@ -4,9 +4,21 @@ use yii\helpers\Url;
 
 $this->title = 'Felix-portfolio-landing';
 ?>
-<!-- <h1>Felix Portfolio Landing</h1>
-<a href="<?= Url::to(['site/about'])?>" class="btn-about">About Me</a> -->
+
+<!-- ======= Intro Section ======= -->
+<div id="home" class="intro route bg-image" style="background-image: url('../images/felo.jpeg')">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container">
+        <h1 class="intro-title mb-4">I am Felix Atika</h1>
+          <p class="intro-subtitle"><span class="text-slider-items">CEO Felix-Folio,Web Developer,Web Designer,Frontend Developer,Graphic Designer</span><strong class="text-slider"></strong></p>
+          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+       
 
 
-
-   
+<a href="<?= Url::to(['site/project'])?>" class="btn-project">Project</a>
+        </div> 
+      </div>
+    </div>
+  </div><!-- End Intro Section -->

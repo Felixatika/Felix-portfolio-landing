@@ -2,7 +2,7 @@
 
 /* @var $this \yii\web\View */
 /* @var $content string */
-
+use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
@@ -38,7 +38,7 @@ AppAsset::register($this);
   <!-- ======= Header/ Navbar ======= -->
   <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll"  href="index.html"><img src="images/felo1.png" height="70px" width="70px" alt="" class="img-fluid"></a>
+      <a class="navbar-brand js-scroll"  href=""><img src="<?= Yii::$app->request->baseUrl;?>/images/felo1.png" height="70px" width="70px"></a>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
         <span></span>
@@ -47,7 +47,7 @@ AppAsset::register($this);
       <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link js-scroll active" href="index.html">Home</a>
+            <a class="nav-link js-scroll active" href="<?= Url::to(['site/index'])?>">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll" href="#about">About</a>
@@ -64,30 +64,21 @@ AppAsset::register($this);
           <li class="nav-item">
             <a class="nav-link js-scroll" href="#contact">Contact</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="<?= Url::to(['site/project'])?>">Project</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-<!-- ======= Intro Section ======= -->
-<div id="home" class="intro route bg-image" style="background-image: url(images/bob.jpg)">
-    <div class="overlay-itro"></div>
-    <div class="intro-content display-table">
-      <div class="table-cell">
-        <div class="container">
-        <h1 class="intro-title mb-4">I am Felix Atika</h1>
-          <p class="intro-subtitle"><span class="text-slider-items">CEO Felix-Folio,Web Developer,Web Designer,Frontend Developer,Graphic Designer</span><strong class="text-slider"></strong></p>
-          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
-       
-         <?= Breadcrumbs::widget([
+  <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= Alert::widget() ?>
         <?= $content ?>
-        </div> 
-      </div>
-    </div>
-  </div><!-- End Intro Section -->
+
+
   <main id="main">
  <!-- ======= About Section ======= -->
  <section id="about" class="about-mf sect-pt4 route">
@@ -100,7 +91,8 @@ AppAsset::register($this);
                   <div class="row">
                     <div class="col-sm-6 col-md-5">
                       <div class="about-img">
-                        <img src="images/felo.jpg" class="img-fluid rounded b-shadow-a" alt="">
+                      <img src="<?= Yii::$app->request->baseUrl;?>/images/felo.jpg" height="150px" width="150px">
+                        <!-- <img src="images/felo.jpg" class="img-fluid rounded b-shadow-a" alt=""> -->
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-7">
@@ -345,7 +337,8 @@ AppAsset::register($this);
 
               <!-- <a href="images/work1.jpg" data-gall="portfolioGallery" class="venobox"> -->
                 <div class="work-img">
-                  <img src="assets/img/work1.jpg" alt="" class="img-fluid">
+                  <!-- <img src="assets/img/work1.jpg" alt="" class="img-fluid"> -->
+                  <img src="<?= Yii::$app->request->baseUrl;?>/images/work1.jpg">
                 </div>
               </a>
               <div class="work-content">
@@ -369,7 +362,9 @@ AppAsset::register($this);
             <div class="work-box">
               <!-- <a href="images/work2.jpg" data-gall="portfolioGallery" class="venobox"> -->
                 <div class="work-img">
-                  <img src="images/work2.jpg" alt="" class="img-fluid">
+                  <!-- <img src="images/work2.jpg" alt="" class="img-fluid"> -->
+                  <img src="<?= Yii::$app->request->baseUrl;?>/images/work2.jpg">
+
                 </div>
               </a>
               <div class="work-content">
@@ -393,7 +388,9 @@ AppAsset::register($this);
             <div class="work-box">
               <a href="images/work3.jpg" data-gall="portfolioGallery" class="venobox">
                 <div class="work-img">
-                <img src="images/work3.jpg" alt="" class="img-fluid">
+                <!-- <img src="images/work3.jpg" alt="" class="img-fluid"> -->
+                <img src="<?= Yii::$app->request->baseUrl;?>/images/work3.jpg">
+
                 </div>
               </a>
               <div class="work-content">
@@ -417,7 +414,9 @@ AppAsset::register($this);
             <div class="work-box">
               <a href="images/work8.jpg" data-gall="portfolioGallery" class="venobox">
                 <div class="work-img">
-                <img src="images/work8.jpg" alt="" class="img-fluid">
+                <!-- <img src="images/work8.jpg" alt="" class="img-fluid"> -->
+                <img src="<?= Yii::$app->request->baseUrl;?>/images/work4.jpg">
+
                 </div>
               </a>
               <div class="work-content">
@@ -441,7 +440,9 @@ AppAsset::register($this);
             <div class="work-box">
               <a href="images/work5.jpg" data-gall="portfolioGallery" class="venobox">
                 <div class="work-img">
-                <img src="images/work5.jpg" alt="" class="img-fluid">
+                <!-- <img src="images/work5.jpg" alt="" class="img-fluid"> -->
+                <img src="<?= Yii::$app->request->baseUrl;?>/images/work5.jpg">
+
                 </div>
               </a>
               <div class="work-content">
@@ -465,7 +466,9 @@ AppAsset::register($this);
             <div class="work-box">
               <a href="images/work6.jpg" data-gall="portfolioGallery" class="venobox">
                 <div class="work-img">
-                <img src="images/work6.jpg" alt="" class="img-fluid">
+                <!-- <img src="images/work6.jpg" alt="" class="img-fluid"> -->
+                <img src="<?= Yii::$app->request->baseUrl;?>/images/work6.jpg">
+
                 </div>
               </a>
               <div class="work-content">
@@ -526,7 +529,7 @@ AppAsset::register($this);
       </div>
     </div><!-- End Testimonials Section -->
 <!-- ======= Blog Section ======= -->
-<section id="blog" class="blog-mf sect-pt4 route">
+<!-- <section id="blog" class="blog-mf sect-pt4 route">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -636,8 +639,9 @@ AppAsset::register($this);
             </div>
           </div>
         </div>
-      </div>
-    </section><!-- End Blog Section -->
+      </div> -->
+    <!-- </section> -->
+    <!-- End Blog Section -->
  <!-- ======= Contact Section ======= -->
  <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
       <div class="overlay-mf"></div>
@@ -713,8 +717,12 @@ AppAsset::register($this);
                       <ul>
                         <li><a href="https://www.facebook.com/felix.atique"><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
                         <li><a href="https://www.instagram.com/felixatique/"><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
+                        <li><a href="https://www.linkedin.com/in/felix-atika-47309a124/"><span class="ico-circle"><i class="ion-social-linkedin"></i></span></a></li>
                         <li><a href="https://twitter.com/felix_atika"><span class="ico-circle"><i class="ion-social-twitter"></i></span></a></li>
                         <li><a href="https://github.com/Felixatika"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
+                        <li><a href="https://www.reddit.com/user/Felixatika"><span class="ico-circle"><i class="ion-social-reddit"></i></span></a></li>
+
+                        
                       </ul>
                     </div>
                   </div>
@@ -734,7 +742,7 @@ AppAsset::register($this);
     <div class="row">
       <div class="col-sm-12">
         <div class="copyright-box">
-          <p class="copyright">&copy; Copyright <strong>DevFolio</strong>. All Rights Reserved</p>
+          <p class="copyright">&copy; Copyright <strong>FelixFolio</strong>. All Rights Reserved</p>
           <div class="credits">
             <!--
             All the links in the footer should remain intact.
