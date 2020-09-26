@@ -76,11 +76,7 @@ class SiteController extends Controller
     {
         return $this->render('index');
     }
-    public function actionProject()
-    {
-        return $this->render('project');
-    }
-
+    
     /**
      * Logs in a user.
      *

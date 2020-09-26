@@ -118,3 +118,8 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+/* #home{
+    background-image: url('../images/feli.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+} */

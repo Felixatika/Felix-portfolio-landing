@@ -4,9 +4,12 @@ use yii\helpers\Url;
 
 $this->title = 'Felix-portfolio-landing';
 ?>
+<div class="site-index">
 
 <!-- ======= Intro Section ======= -->
-<div id="home" class="intro route bg-image" style="background-image: url('../images/felo.jpeg')">
+<div id="home" class="intro route bg-image" style="background-image:url('../images/felo.jpeg')">
+ <!-- style="background-image: url('../images/feli.jpg')"> -->
+
     <div class="overlay-itro"></div>
     <div class="intro-content display-table">
       <div class="table-cell">
@@ -16,9 +19,9 @@ $this->title = 'Felix-portfolio-landing';
           <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
        
 
-
-<a href="<?= Url::to(['site/project'])?>" class="btn-project">Project</a>
         </div> 
       </div>
     </div>
+</div>
+</div>
   </div><!-- End Intro Section -->

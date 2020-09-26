@@ -58,15 +58,13 @@ AppAsset::register($this);
           <li class="nav-item">
             <a class="nav-link js-scroll" href="#work">Work</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link js-scroll" href="#blog">Blog</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link js-scroll" href="#contact">Contact</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="<?= Url::to(['site/project'])?>">Project</a>
-          </li>
+          
         </ul>
       </div>
     </div>
